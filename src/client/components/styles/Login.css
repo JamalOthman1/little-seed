@@ -1,0 +1,105 @@
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .login-container h2 {
+    font-size: 3rem;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    color: var(--forrestGreen);
+  }
+  
+  .login-container form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 20rem;
+    background-color: var(--soil);
+    padding: 1.5rem;
+    border-radius: var(--radiusStandard);
+  }
+  
+  .login-container label {
+    margin-bottom: 0.5rem;
+    color: var(--almostBlack);
+  }
+  
+  .login-container input {
+    margin-bottom: 1rem;
+    padding: .56rem; /* Padding to match the button height */
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: var(--radiusStandard);
+    border-color: var(--forrestGreen); 
+  }
+  
+  .login-container .form-footer {
+    display: flex;
+    justify-content: flex-end; /* Aligns the buttons to the right */
+    align-items: center;
+  }
+  
+  /* Styles for buttons */
+  .login-buttons {
+    background-color: var(--terracotta);
+    border: none;
+    color: var(--almostBlack);
+    cursor: pointer;
+    margin-right: 0px; /*spacing between buttons*/
+    width: 6.25rem; 
+    height: 2.5rem;
+    box-sizing: border-box; 
+    border-radius: var(--radiusStandard);
+  }
+
+  
+  /* Set up the link to not affect the button size */
+  .login-container .register-route {
+    margin-right: auto; /* Pushes the sign-up button to the left */
+    text-decoration: none; 
+  }
+  
+  .login-buttons:hover {
+    background-color: var(--paleGreen);
+    color: var(--terracotta);
+  }
+  
+  /* Media Q's for Responsive Design */
+@media (max-width: 768px) {
+  .login-container {
+    padding: 20px; 
+    align-items: flex-start; /
+  }
+
+  .login-container form {
+    width: auto; /* Allow form to fill the width on smaller screens */
+    margin: 0; /* Remove any default margins */
+  }
+
+  .login-container input,
+  .login-container button {
+    width: 100%; 
+    margin-bottom: 20px; 
+  }
+
+  .login-container .form-footer {
+    flex-direction: column; /* Stack the buttons vertically on smaller screens */
+    align-items: stretch; /* Align buttons to stretch to container width */
+    padding-right: 0; /* Reset any padding on the right */
+  }
+
+  .login-container .register-route button,
+  .login-container button[type='submit'] {
+    width: auto; /* Reset width to auto for buttons */
+    margin-right: 0; /* Reset margin between buttons */
+    margin-bottom: 0; /* Remove bottom margin to allow for stacking */
+  }
+
+  .login-container .register-route button {
+    margin-bottom: 10px; /* Add some space below the sign-up button */
+  }
+}
+
